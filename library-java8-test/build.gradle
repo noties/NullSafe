@@ -1,0 +1,16 @@
+apply plugin: 'java'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+test {
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+
+dependencies {
+    testCompile project(':library')
+    testCompile J_UNIT
+    testCompile MOCKITO
+}

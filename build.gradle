@@ -1,0 +1,23 @@
+allprojects {
+    repositories {
+        jcenter()
+        google()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion '4.0'
+}
+
+ext {
+
+    final def supportVersion = '26.0.2'
+    SUPPORT_ANNOTATIONS = "com.android.support:support-annotations:$supportVersion"
+
+    J_UNIT = 'junit:junit:4.12'
+    MOCKITO = 'org.mockito:mockito-core:2.11.0'
+}
