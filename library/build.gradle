@@ -6,3 +6,7 @@ targetCompatibility = JavaVersion.VERSION_1_7
 dependencies {
     compile SUPPORT_ANNOTATIONS
 }
+
+if (project.hasProperty('release')) {
+    apply from: 'jar-publishing-maven.gradle'
+}
